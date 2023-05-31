@@ -21,6 +21,7 @@ export default ({ resource, isList }: Props) => {
                     <File size={128} strokeWidth={0.1} />
                     <span className="">{resource.filename}</span>
                     <span className="">{new Date(resource.updatedTs).toLocaleDateString()}</span>
+                    <span>{resource.publicId}</span>
                 </div>
             )
         }
