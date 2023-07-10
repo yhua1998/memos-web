@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export function signin(username: string, password: string) {
-    return axios.post<ResponseObject<User>>("/api/auth/signin", { username, password })
+    return axios.post<ResponseObject<User>>("/api/v1/auth/signin", { username, password })
 }
 
 export function getSelfUser() {
@@ -13,7 +13,7 @@ export function signout() {
 }
 
 export function signup(username: string, password: string) {
-    return axios.post<ResponseObject<User>>("/api/auth/signup", {
+    return axios.post<ResponseObject<User>>("/api/v1/auth/signup", {
         username,
         password,
     });

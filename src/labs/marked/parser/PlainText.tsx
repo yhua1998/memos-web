@@ -1,0 +1,17 @@
+import { matcher } from "../matcher";
+
+export const PLAIN_TEXT_REG = /(.+)/
+
+const renderer = (rawStr: string) => {
+    const matchResult = matcher(rawStr, PLAIN_TEXT_REG)
+    if (!matchResult) {
+        return rawStr
+    }
+    return matchResult[1]
+}
+
+export default {
+    name: "plain text",
+    regexp: PLAIN_TEXT_REG,
+    renderer
+}

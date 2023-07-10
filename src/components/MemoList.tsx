@@ -1,5 +1,5 @@
 import { useMemos } from "@/store/memo"
-import MemoItem from "./MemoItem"
+import MemoItem from "./MemoListItem"
 import { useEffect } from "react"
 import { showImgPreViewDialog } from "./Dialog"
 
